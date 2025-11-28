@@ -1,6 +1,8 @@
 ---
-draft: true
-tags: [金句, Philosophy]
+draft: false
+tags:
+  - 金句
+  - Philosophy
 ---
 I hear and I forget. I see and I remember. I do and I understand — Confucius #名言
 你的思想欺骗了你——它让你相信你的恐惧比实际上更大。

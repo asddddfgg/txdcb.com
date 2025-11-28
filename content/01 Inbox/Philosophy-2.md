@@ -1,6 +1,8 @@
 ---
-draft: true
-tags: [金句, Philosophy]
+draft: false
+tags:
+  - 金句
+  - Philosophy
 ---
 心有花田半亩，何惧浮生浅淡。
 真正的强大不是对抗而是允许发生

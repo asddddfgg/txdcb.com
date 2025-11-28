@@ -1,6 +1,8 @@
 ---
-draft: true
-tags: [金句, Education]
+draft: false
+tags:
+  - 金句
+  - Education
 ---
 你那是什么教育？那就是我希望你是什么样的我就怎么样塑造你。
 专业人士和非专业人士就像苹果和橘子一样，找不到共同话题。
