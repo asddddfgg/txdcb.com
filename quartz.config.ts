@@ -16,8 +16,12 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+
+// 原来：baseUrl: "quartz.jzhao.xyz",改成我自己的域名了
+    baseUrl: "https://www.txdcb.com",
+
+ //我改的“04 Private 私人文件夹”
+    ignorePatterns: ["04 Private 私人文件夹", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
@@ -73,7 +77,27 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
-    filters: [Plugin.RemoveDrafts()],
+
+
+//原来就一行filters: [Plugin.RemoveDrafts()],
+    filters: [Plugin.RemoveDrafts()
+      Plugin.RemoveDrafts(),
+      {
+        name: "RemovePrivateFolder",
+        async transformPage(page) {
+          // page.path 是相对于 content 的路径
+          if (page.path.startsWith("04 Private 私人文件夹/")) {
+            return null
+          }
+          return page
+        }
+      }
+],
+
+
+
+
+
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
