@@ -21,7 +21,7 @@ const config: QuartzConfig = {
     baseUrl: "https://www.txdcb.com",
 
  //我改的“04 Private 私人文件夹”
-    ignorePatterns: ["04 Private 私人文件夹", "templates", ".obsidian"],
+    ignorePatterns: ["04 Private 私人文件夹","Templaters", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
