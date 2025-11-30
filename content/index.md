@@ -6,9 +6,9 @@ title: "首页"
 
 ```mermaid
 graph TD
-    T[灵感] --> A[收集 <br> inbox]
-    T --> S[整理<br> Notes]
-    T --> C[归档<br> Archive]
+    T[灵感] --> A[收集 <br> 01 Inbox]
+    T --> S[整理<br> 02 Notes]
+    T --> C[归档<br> 03 Archive]
     style T fill:#667eea,color:#fff
     style A fill:#43e97b,color:#000
     style S fill:#fa709a,color:#fff
