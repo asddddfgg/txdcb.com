@@ -1,0 +1,22 @@
+
+ Quartz v4.5.2  
+
+X [ERROR] Expected "]" but found "Plugin"
+
+    quartz.config.ts:84:6:
+      84 │       Plugin.RemoveDrafts(),
+         │       ~~~~~~
+         ╵       ]
+
+Couldn't parse Quartz configuration: ./quartz/build.ts
+TypeError [ERR_INVALID_ARG_TYPE]: The "text" argument must be of type string. Received an instance of Error
+    at styleText (node:util:240:3)
+    at file:///E:/quartz/quartz/cli/handlers.js:321:30
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async build (file:///E:/quartz/quartz/cli/handlers.js:319:20)
+    at async handleBuild (file:///E:/quartz/quartz/cli/handlers.js:355:5)
+    at async Object.handler (file:///E:/quartz/quartz/bootstrap-cli.mjs:36:5) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+
+E:\quartz>

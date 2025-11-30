@@ -79,20 +79,7 @@ const config: QuartzConfig = {
     ],
 
 
-//原来就一行filters: [Plugin.RemoveDrafts()],
-    filters: [Plugin.RemoveDrafts()
-      Plugin.RemoveDrafts(),
-      {
-        name: "RemovePrivateFolder",
-        async transformPage(page) {
-          // page.path 是相对于 content 的路径
-          if (page.path.startsWith("04 Private 私人文件夹/")) {
-            return null
-          }
-          return page
-        }
-      }
-],
+filters: [Plugin.RemoveDrafts()],
 
 
 
