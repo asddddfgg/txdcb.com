@@ -1,0 +1,17 @@
+
+```mermaid
+graph TD
+    T[灵感] --> A[收集 <br> inbox]
+    T --> S[整理<br> Notes]
+    T --> C[归档<br> Archive]
+    style T fill:#667eea,color:#fff
+    style A fill:#ffffff,color:#000
+    style S fill:#ffffff,color:#000
+    style C fill:#4facfe,color:#fff
+```
+📥     [[01 Inbox]]    →      🗂️ [[02 Notes]]          →     📁 [[03 Archive]]
+
+```dataview
+list from "03 Archive"
+sort file.name asc
+```
