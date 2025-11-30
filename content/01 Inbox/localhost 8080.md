@@ -4,7 +4,7 @@ win r
 cmd
 
 ```batch
-cd /d D:\quartz
+cd /d E:\quartz
 ```
 
 ```batch
