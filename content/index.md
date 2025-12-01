@@ -1,26 +1,10 @@
 ---
 title: "首页"
 ---
-## 🎯 知识管理流程
-
-
-```mermaid
-graph TD
-    T[灵感] --> A[收集 <br> 01 Inbox]
-    T --> S[整理<br> 02 Notes]
-    T --> C[归档<br> 03 Archive]
-    style T fill:#667eea,color:#fff
-    style A fill:#43e97b,color:#000
-    style S fill:#fa709a,color:#fff
-    style C fill:#4facfe,color:#fff
-``` 
-
----
-
 ## 🗂️ 探索主题
 
-- [幼教实操](/category/education) - 课程活动
-- [英语词汇](/category/english) - 单词拆解
+- [[quartz 4 改名自定义的名称]] 
+- [[“我不得不做” 转变为 “我想要做”]]
 - [短视频创作](/category/video) - 脚本模板
 - [自动化工具](/category/tools) - 工作流优化
 
@@ -41,14 +25,3 @@ graph TD
 3. [短视频创作模板](/notes/video1) - 2025-11-25  
 
 ---
-
-## 🗺️ 知识概览
-
-- 核心
-  - 概念 A
-  - 概念 B
-
----
-
-
-测试测试测试测试测试测试测试测试测试测试 #职场 
