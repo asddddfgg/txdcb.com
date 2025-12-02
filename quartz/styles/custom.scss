@@ -1,3 +1,70 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+
+
+/* 终极好看金句卡片 - 适配 V7 模板 */
+.quote-card {
+  background: var(--card);
+  border-left: 6px solid var(--accent, #0066ff);   /* ←←←← 删掉了多余的 ) */
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin: 2rem 0;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.quote-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.18);
+  border-left-width: 9px;
+}
+
+.quote-text {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  color: var(--text-normal);
+}
+
+.quote-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.94em;
+}
+
+.quote-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-pill {
+  background: var(--accent);
+  color: #fff !important;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+/* 热门标签专属色 */
+.quote-card[data-tags~="思考"] { border-left-color: #e74c3c; }
+.quote-card[data-tags~="阅读"] { border-left-color: #3498db; }
+.quote-card[data-tags~="写作"] { border-left-color: #f39c12; }
+.quote-card[data-tags~="人生"] { border-left-color: #9b59b6; }
+.quote-card[data-tags~="成长"] { border-left-color: #2ecc71; }
+.quote-card[data-tags~="心理"] { border-left-color: #e91e63; }
+.quote-card[data-tags~="习惯"] { border-left-color: #f1c40f; }
+.quote-card[data-tags~="效率"] { border-left-color: #1abc9c; }
+
+/* 深色模式完美适配 */
+html.dark .quote-card {
+  background: rgba(45, 45, 60, 0.92);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
