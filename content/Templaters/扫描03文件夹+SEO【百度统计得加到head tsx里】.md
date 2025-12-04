@@ -97,16 +97,6 @@ try {
   }
   </script>
 
-<!-- 百度统计（不转义） -->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?19f0f36c4c000e07fe0661d936e7366c";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
 
 
 </head>
