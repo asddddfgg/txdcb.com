@@ -1,12 +1,7 @@
 @use "./base.scss";
 
-// ==========================================
-// 🌟 Obsidian Quartz 自定义样式 - 标签金句专用
-// 负责页面美化，颜色通过变量控制
-// ==========================================
 
 :root {
-  // 可根据需要修改
   --color-职场: #ff6b6b;
   --color-哲学: #5f27cd;
   --color-社会观察: #00b894;
@@ -22,138 +17,60 @@
   --color-default: #667eea;
 }
 
-// 1️⃣ 全局字体与基础布局
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #1e293b;
   line-height: 1.6;
 }
 
-// 2️⃣ 彩色顶部
 .tag-header {
   padding: 3.5rem 1.5rem;
   text-align: center;
   color: white;
+  h1 { font-size: 2.2rem; font-weight: 700; margin: 0 0 0.5rem; }
+  p { opacity: 0.9; margin: 0; font-size: 1.1rem; }
 }
 
-.tag-header h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
-}
-
-.tag-header p {
-  opacity: 0.9;
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-// 3️⃣ 内容区灰色背景
 .tag-content-wrapper {
   background: #f8fafc;
   padding: 3rem 1.5rem;
+  .tag-content { max-width: 720px; margin: 0 auto; display: grid; gap: 1.5rem; }
 }
 
-.tag-content-wrapper .tag-content {
-  max-width: 720px;
-  margin: 0 auto;
-  display: grid;
-  gap: 1.5rem;
-}
-
-// 4️⃣ 卡片样式
 .tag-card {
   background: white;
   border-radius: 12px;
   padding: 1.8rem;
   border-left: 5px solid var(--card-color, var(--color-default));
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  .sentence { font-size: 1.08rem; line-height: 1.75; }
+  .tag-links {
+    margin-top: 1.5rem;
+    display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 0.35rem;
+    a {
+      background: rgba(102, 126, 234, 0.125);
+      color: #667eea;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: 0.3s;
+      &:hover { background: #667eea; color: white; }
+    }
+  }
 }
 
-.tag-card .sentence {
-  font-size: 1.08rem;
-  line-height: 1.75;
-}
-
-.tag-card .tag-links {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-}
-
-.tag-card .tag-links a {
-  background: rgba(102, 126, 234, 0.125);
-  color: var(--card-color, #667eea);
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 500;
-  white-space: nowrap;
-  transition: 0.3s;
-}
-
-.tag-card .tag-links a:hover {
-  background: var(--card-color, #667eea);
-  color: white;
-}
-
-// 5️⃣ 页脚卡片
 .tag-footer {
-  margin-top: 4rem;
-  padding: 2rem;
-  background: white;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  margin-top: 4rem; padding: 2rem;
+  background: white; border-radius: 12px; text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  p { color: #64748b; margin-bottom: 1rem; font-size: 0.95rem; }
 }
 
-.tag-footer p {
-  color: #64748b;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-}
-
-.tag-footer a.button {
-  display: inline-block;
-  background: var(--card-color, var(--color-default));
-  color: white;
-  text-decoration: none;
-  padding: 0.75rem 2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1.05rem;
-  transition: 0.3s;
-}
-
-.tag-footer a.button:hover {
-  opacity: 0.9;
-}
-
-// 6️⃣ 响应式适配
-@media (max-width: 768px) {
-  .tag-header {
-    padding: 2rem 1rem;
-  }
-
-  .tag-header h1 {
-    font-size: 1.8rem;
-  }
-
-  .tag-header p {
-    font-size: 1rem;
-  }
-
-  .tag-content-wrapper {
-    padding: 2rem 1rem;
-  }
-
-  .tag-card {
-    padding: 1.2rem;
-  }
-
-  .tag-footer {
-    padding: 1.5rem;
-  }
+@media(max-width: 768px) {
+  .tag-header { padding: 2rem 1rem; h1 { font-size: 1.8rem; } p { font-size: 1rem; } }
+  .tag-content-wrapper { padding: 2rem 1rem; }
+  .tag-card { padding: 1.2rem; }
+  .tag-footer { padding: 1.5rem; }
 }
