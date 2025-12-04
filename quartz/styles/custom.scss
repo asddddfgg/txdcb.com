@@ -4,67 +4,95 @@
 
 
 
-/* 终极好看金句卡片 - 适配 V7 模板 */
-.quote-card {
-  background: var(--card);
-  border-left: 6px solid var(--accent, #0066ff);   /* ←←←← 删掉了多余的 ) */
+
+
+// ==========================================
+// 🌟 Obsidian Quartz 自定义样式 - 标签金句专用
+// 负责页面美化，颜色通过变量控制
+// ==========================================
+
+:root {
+  // 可根据需要修改
+  --color-职场: #ff6b6b;
+  --color-哲学: #5f27cd;
+  --color-社会观察: #00b894;
+  --color-个人成长: #fdcb6e;
+  --color-犀利吐槽: #fd79a8;
+  --color-AI: #3498db;
+  --color-思考: #00cec9;
+  --color-竞争哲学: #8e44ad;
+  --color-心态调整: #16a085;
+  --color-成功学: #e17055;
+  --color-权力结构: #c0392b;
+  --color-人性: #27ae60;
+  --color-default: #667eea;
+}
+
+// 1️⃣ 全局字体与基础布局
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+// 2️⃣ 彩色顶部
+.tag-header {
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  color: white;
+  h1 { font-size: 2.2rem; font-weight: 700; margin: 0 0 0.5rem; }
+  p { opacity: 0.9; margin: 0; font-size: 1.1rem; }
+}
+
+// 3️⃣ 内容区灰色背景
+.tag-content-wrapper {
+  background: #f8fafc;
+  padding: 3rem 1.5rem;
+  .tag-content { max-width: 720px; margin: 0 auto; display: grid; gap: 1.5rem; }
+}
+
+// 4️⃣ 卡片样式
+.tag-card {
+  background: white;
   border-radius: 12px;
-  padding: 22px 26px;
-  margin: 2rem 0;
-  transition: all 0.35s ease;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  padding: 1.8rem;
+  border-left: 5px solid var(--card-color, var(--color-default));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+  .sentence { font-size: 1.08rem; line-height: 1.75; }
+
+  .tag-links {
+    margin-top: 1.5rem;
+    display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 0.35rem;
+    a {
+      background: rgba(102, 126, 234, 0.125);
+      color: #667eea;
+      padding: 0.2rem 0.6rem; border-radius: 12px;
+      text-decoration: none; font-weight: 500; white-space: nowrap;
+      transition: 0.3s;
+      &:hover { background: #667eea; color: white; }
+    }
+  }
 }
 
-.quote-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.18);
-  border-left-width: 9px;
+// 5️⃣ 页脚卡片
+.tag-footer {
+  margin-top: 4rem; padding: 2rem; background: white;
+  border-radius: 12px; text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  p { color: #64748b; margin-bottom: 1rem; font-size: 0.95rem; }
+  a.button {
+    display: inline-block; background: var(--card-color, var(--color-default));
+    color: white; text-decoration: none; padding: 0.75rem 2rem;
+    border-radius: 8px; font-weight: 600; font-size: 1.05rem; transition: 0.3s;
+    &:hover { opacity: 0.9; }
+  }
 }
 
-.quote-text {
-  font-size: 1.1em;
-  line-height: 1.8;
-  margin-bottom: 16px;
-  color: var(--text-normal);
-}
-
-.quote-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  color: var(--text-muted);
-  font-size: 0.94em;
-}
-
-.quote-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tag-pill {
-  background: var(--accent);
-  color: #fff !important;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.8em;
-  font-weight: 600;
-}
-
-/* 热门标签专属色 */
-.quote-card[data-tags~="思考"] { border-left-color: #e74c3c; }
-.quote-card[data-tags~="阅读"] { border-left-color: #3498db; }
-.quote-card[data-tags~="写作"] { border-left-color: #f39c12; }
-.quote-card[data-tags~="人生"] { border-left-color: #9b59b6; }
-.quote-card[data-tags~="成长"] { border-left-color: #2ecc71; }
-.quote-card[data-tags~="心理"] { border-left-color: #e91e63; }
-.quote-card[data-tags~="习惯"] { border-left-color: #f1c40f; }
-.quote-card[data-tags~="效率"] { border-left-color: #1abc9c; }
-
-/* 深色模式完美适配 */
-html.dark .quote-card {
-  background: rgba(45, 45, 60, 0.92);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+// 6️⃣ 响应式适配
+@media (max-width: 768px) {
+  .tag-header { padding: 2rem 1rem; h1 { font-size: 1.8rem; } p { font-size: 1rem; } }
+  .tag-content-wrapper { padding: 2rem 1rem; }
+  .tag-card { padding: 1.2rem; }
+  .tag-footer { padding: 1.5rem; }
 }

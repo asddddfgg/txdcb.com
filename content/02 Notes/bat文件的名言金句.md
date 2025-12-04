@@ -1,0 +1,4 @@
+<div class="tag-header" style="background:#667eea"><h1>关于「bat文件」的名言金句</h1><p>收录 1 条内容</p></div><div class="tag-content-wrapper"><div class="tag-content"><article class="tag-card" style="--card-color:#667eea">
+                 <div class="sentence">建一个文本文件，".txt"后缀的，新建文本文件.txt，把下边内容一粘贴，保存，然后把这个文本文件后缀名改成bat</div>
+                 <div class="tag-links"><a href="https://txdcb.com/02-Notes/bat%E6%96%87%E4%BB%B6%E7%9A%84%E5%90%8D%E8%A8%80%E9%87%91%E5%8F%A5.html" style="--card-color:#667eea">bat文件</a></div>
+               </article></div><div class="tag-footer"><p>🕐 生成时间：2025/12/4 12:30:30</p></div></div>

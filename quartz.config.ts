@@ -23,6 +23,16 @@ const config: QuartzConfig = {
  //我改的“04 Private 私人文件夹”
     ignorePatterns: ["04 Private 私人文件夹","Templaters", "templates", ".obsidian"],
     defaultDateType: "modified",
+
+
+
+
+    // ⭐⭐⭐ 这是我自己加的一行引用自定义样式文件的命令
+    customCss: ["styles/custom.scss"],
+
+
+
+
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
