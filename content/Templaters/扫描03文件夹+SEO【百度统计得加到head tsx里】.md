@@ -9,7 +9,7 @@ const cleanup=()=>setTimeout(()=>delete window._tagCollectorRunning,1000);
 
 try {
   const TARGET_FOLDER="02 Notes"; // 输出文件夹
-  const SCAN_FOLDER="03 Archive"; // 只扫描这个文件夹
+  const SCAN_FOLDER="02 Notes-原料间"; // 只扫描这个文件夹
   const HEADER_SUFFIX="的名言金句";
   const EXCLUDE_FILES=new Set(["万能标签搜索器.md","全站标签总览.md","tR.md"]);
 
