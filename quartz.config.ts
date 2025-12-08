@@ -110,7 +110,7 @@ filters: [Plugin.RemoveDrafts()],
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      // 我自己注释掉这一行的，因为它多产生了一个图像文件。 一个html+一图。Plugin.CustomOgImages(),// <--- 这一行被注释掉了！
     ],
   },
 }
