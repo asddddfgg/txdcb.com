@@ -15,10 +15,10 @@ const config: QuartzConfig = {
     analytics: {
       provider: "plausible",
     },
-    locale: "en-US",
+    locale: "zh-CN",
 
 // 原来：baseUrl: "quartz.jzhao.xyz",改成我自己的域名了
-    baseUrl: "https://www.txdcb.com",
+    baseUrl: "www.txdcb.com",
 
  //我改的“04 Private 私人文件夹”
     ignorePatterns: ["04 Private 私人文件夹","Templaters", "02 Notes-原料间", ".obsidian"],
