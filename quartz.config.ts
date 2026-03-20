@@ -13,7 +13,10 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+// 原来：provider: "plausible",
+      provider: "umami",
+// 原来：没有下一行websiteId: '……'
+websiteId: 'b8a38592-e135-4862-b24c-747c9d029ccb'
     },
     locale: "zh-CN",
 
